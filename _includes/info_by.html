@@ -1,0 +1,7 @@
+{%- if site.author.name -%}
+  {%- if site.author.url -%}
+<p>by <a href="{{ site.author.url }}">{{ site.author.name }}</a></p>
+  {%- else -%}
+<p>by {{ site.author.name }}</p>
+  {%- endif -%}
+{%- endif -%}

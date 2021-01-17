@@ -1,0 +1,10 @@
+{%- assign copyright_to = site.author.name | default: site.title -%}
+{%- if site.author.name and site.author.url -%}
+  {%- if site.author.url -%}
+    {%- capture copyright_to -%}
+<a href="{{ site.author.url }}">{{ copyright_to }}</a>
+    {%- endcapture -%}
+  {%- endif -%}
+{%- endif -%}
+
+<p class="copyright">&copy;{{ site.time | date: '%Y' }} {{ copyright_to }}</p>

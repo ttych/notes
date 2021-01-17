@@ -5,11 +5,14 @@ description: >-
 url: ""
 baseurl: "/notes"
 
+author:
+  name: Thomas Tych
+  url:
+
 github: "ttych/notes"
 gitlab: "ttych/notes"
 
 comments: true
-isso: ''
 disqus: ''
 
 
@@ -44,5 +47,5 @@ defaults:
       type: posts
     values:
       show_excerpt: true
-      layout: article
+      layout: posts
       author: Thomas Tych

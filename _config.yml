@@ -47,5 +47,5 @@ defaults:
       type: posts
     values:
       show_excerpt: true
-      layout: posts
+      layout: post
       author: Thomas Tych

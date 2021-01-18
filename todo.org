@@ -1,0 +1,12 @@
+* layout
+** fix highlight layout
+
+* jekyll
+** navigation for pagination
+** archive
+** tags
+** categories
+** RSS
+
+* content
+** about

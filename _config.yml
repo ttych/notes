@@ -21,6 +21,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 
+include:
+  - _pages
 
 exclude:
   - .sass-cache/
@@ -49,3 +51,4 @@ defaults:
       show_excerpt: true
       layout: post
       author: Thomas Tych
+      type: post

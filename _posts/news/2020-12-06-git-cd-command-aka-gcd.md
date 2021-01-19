@@ -2,6 +2,7 @@
 title: git cd command aka gcd
 date: 2020-12-06 15:06:20 +0100
 categories: system git
+tags: git
 ---
 
 While working on development, I need to move around files and

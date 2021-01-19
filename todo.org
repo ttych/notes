@@ -1,3 +1,8 @@
+#+TITLE: notes on Notes
+#+AUTHOR: ttych
+#+DATE: 2021-01-18
+#+STARTUP: showall
+
 * layout
 ** fix highlight layout
 

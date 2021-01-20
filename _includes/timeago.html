@@ -1,0 +1,23 @@
+{%- assign date_format_long = content.date_format_long | default: site.date_format_long | default: "%b %e, %Y" -%}
+{%- assign date_format_short = content.date_format_short | default: site.date_format_short | default: "%b %e" -%}
+{%- assign date_format_tooltip = content.date_format_tooltip | default: site_format_tooltip | default: "%a, %b %e, %Y, %l:%M %p %z" -%}
+
+<span class="timeago {% if include.class %}{{ include.class }}{% endif %}"
+  {% if include.tooltip %}
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="{{ include.date | date: date_format_tooltip }}"
+  {% endif %}>
+
+  {% assign this_year = site.time | date: "%Y" %}
+  {% assign post_year = include.date | date: "%Y" %}
+
+  {% if post_year == this_year %}
+    {{ include.date | date: date_format_short }}
+  {% else %}
+    {{ include.date | date: date_format_long }}
+  {% endif %}
+
+  <i class="hidden">{{ include.date | date_to_xmlschema }}</i>
+
+</span>

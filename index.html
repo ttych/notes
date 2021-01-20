@@ -2,34 +2,44 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
-<div class="article">
-    <div class="content-area">
-        <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d, %Y" }} - {{ post.title }}</a></h1>
-        {% if site.comments and post.comments %}
-            {% if site.disqus != '' %}
-            <p class="author"><a href="{{ site.baseurl }}{{ post.url }}/#disqus_thread" data-disqus-identifier="{{ post.url | slugify }}">Comments</a></p>
-            {% elsif site.isso != '' %}
-            <p class="author"><a href="{{ site.baseurl }}{{ post.url }}{{ site.isso_suffix }}#isso-thread">Comments</a></p>
-            {% endif %}
-        {% endif %}
-        <div class="content">
-            {{ post.content }}
-        </div>
-    </div>
-</div>
-{% endfor %}
+{%- for post in paginator.posts -%}
+  <div class="content-area">
+    {%- include article-preview.html article=post -%}
+  </div>
+{%- endfor -%}
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/index.html" class="previous">Newer</a>
-      {% else %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.previous_page }}" class="previous">Newer</a>
+{%- if paginator.total_pages > 1 -%}
+  <div>
+    <ul class="pagination">
+      {%- if paginator.previous_page -%}
+      <li>
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;</a>
+      </li>
+      {%- endif -%}
+
+      <li>
+        <a href="{{ site.paginate_path | relative_url | replace: 'page:num/', '' }}">First</a>
+      </li>
+
+      {% for page in (1..paginator.total_pages) %}
+      <li class="pagination-item {% if page == paginator.page %}pagination-selected{% endif %}">
+        {% if page == 1 %}
+        <a href="{{ site.paginate_path | relative_url | replace: 'page:num/', '' }}">{{ page }}</a>
+        {% else %}
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+        {% endif %}
+      </li>
+      {% endfor %}
+
+      <li>
+        <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">Last</a>
+      </li>
+
+      {% if paginator.next_page %}
+      <li>
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&rarr;</a>
+      </li>
       {% endif %}
-  {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">Older</a>
-  {% endif %}
-</div>
+    </ul>
+  </pagination>
+{% endif %}

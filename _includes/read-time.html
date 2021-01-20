@@ -1,0 +1,11 @@
+{%- assign words = include.content | strip_html | number_of_words -%}
+{%- assign wpm = include.wpm | default: site.wpm | default: 180 -%}
+{%- assign read_time = words | divided_by: wpm -%}
+
+{%- unless read_time > 0 -%}
+  {%- assign read_time = 1 -%}
+{%- endunless -%}
+
+<span class="readtime" data-toggle="tooltip" data-placement="bottom"
+      title="{{ words }} words">{{ read_time }}{{" min"}}
+</span>

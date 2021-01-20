@@ -1,0 +1,18 @@
+{%- if include.article -%}
+<article class="article">
+  <h1 class="article-title">
+    <a href="{{ include.article.url | relative_url }}">
+      {{ include.article.title | escape }}
+    </a>
+  </h1>
+  {%- include article-meta.html article=include.article -%}
+  {%- if collection.show_excerpts or include.article.show_excerpt -%}
+  <div class="article-content">
+    {{ include.article.excerpt | markdownify }}
+    <p class="article-annotation">
+      <a href="{{ include.article.url | relative_url }}">...</a>
+    </p>
+  </div>
+  {%- endif -%}
+</article>
+{%- endif -%}

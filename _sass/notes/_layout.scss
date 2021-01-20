@@ -1,4 +1,7 @@
 ////////// common
+.hidden {
+    display: none !important;
+}
 .d-flex {
     display: flex;
 }
@@ -15,7 +18,7 @@
     text-align: right;
 }
 .t-small {
-    font-size: $font-size-small;
+    font-size: 0.8em;
 }
 
 
@@ -62,6 +65,7 @@
     }
     &:hover {
         color: $banner-color;
+        text-decoration: none;
     }
 }
 .header-nav {
@@ -229,11 +233,10 @@
 .site-main {
     flex: 1 0 auto;
 
-    margin-top: 4 * $font-size;
+    margin-top: 5 * $font-size;
     margin-bottom: 4 * $font-size;
 
     display: flex;
-
 }
 .site-sidebar {
     width: 40ch;
@@ -269,6 +272,57 @@
 }
 .content-area {
     h1 {
-        color: $content-header-color;
+        color: $article-header-color;
+        margin-bottom: 0;
+    }
+}
+
+
+////////// article
+.article-title {
+    font-size: 1.5rem;
+}
+.article-meta {
+    font-size: 0.7rem;
+    color: $article-annotation-color;
+    margin: 0;
+    list-style: none;
+    padding-inline-start: 0px;
+    display: flex;
+    justify-content: start;
+    gap: 2em;
+}
+.article-content {
+    margin-top: 1em;
+}
+.article-annotation {
+    font-size: 0.8em;
+    color: $article-annotation-color;
+    margin: 0;
+}
+
+
+////////// articles
+ul.pagination {
+    padding-inline-start: 0px;
+    text-align: center;
+    list-style: none;
+    font-size: 0.9em;
+}
+ul.pagination > li {
+    display: inline;
+    padding: 0.8em;
+    margin: 0.1em;
+}
+.pagination-item {
+    // border: 1px solid grey;
+    border-radius: 1em;
+}
+.pagination-selected {
+    // color: $sidebar-color;
+    background-color: $grey-color-light;
+
+    a {
+        // color: $sidebar-color;
     }
 }

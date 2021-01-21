@@ -3,17 +3,35 @@
 #+DATE: 2021-01-18
 #+STARTUP: showall
 
-* layout
-** fix highlight layout
+* example
+  http://jekyllthemes.org/themes/tale/
+  http://jekyllthemes.org/themes/jekyll-clean/
+  http://jekyllthemes.org/themes/whiteglass/
 
-* jekyll
-** navigation for pagination
-** archive
-** tags
-** categories
-** RSS
+* post / article
+** TODO navigation (sidebar)
+** TODO meta (sidebar)
+** TODO references (sidebar)
+** TODO Related articles (sidebar)
+** TODO highlight (code)
 
-* content
-** about
+* index
+** DONE recent notes
+   - State "DONE"       from              [2021-01-21 jeu. 22:41]
+** TODO navigation with pagination (sidebar)
+** TODO navigation (bottom)
+
+* archive
+** TODO standard layout (or timeline) ?
+** TODO timeline in Kevin Powell ?
+
+* tags
+** TODO add sidebar tags ?
+
+* browse categories ?
+** TODO categories from _config / from path ?
+
+* about
+** TODO about the site / hosting / me / content type
 
 * tmp

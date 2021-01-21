@@ -9,8 +9,8 @@ layout: default
 {%- endfor -%}
 
 {%- if paginator.total_pages > 1 -%}
-  <div>
-    <ul class="pagination">
+  <div class="pagination">
+    <ul>
       {%- if paginator.previous_page -%}
       <li>
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;</a>

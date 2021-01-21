@@ -17,10 +17,6 @@ layout: default
       </li>
       {%- endif -%}
 
-      <li>
-        <a href="{{ site.paginate_path | relative_url | replace: 'page:num/', '' }}">First</a>
-      </li>
-
       {% for page in (1..paginator.total_pages) %}
       <li class="pagination-item {% if page == paginator.page %}pagination-selected{% endif %}">
         {% if page == 1 %}
@@ -30,10 +26,6 @@ layout: default
         {% endif %}
       </li>
       {% endfor %}
-
-      <li>
-        <a href="{{ site.paginate_path | relative_url | replace: ':num', paginator.total_pages }}">Last</a>
-      </li>
 
       {% if paginator.next_page %}
       <li>

@@ -19,7 +19,8 @@
 ** DONE recent notes
    - State "DONE"       from              [2021-01-21 jeu. 22:41]
 ** TODO navigation with pagination (sidebar)
-** TODO navigation (bottom)
+** DONE navigation (bottom)
+   - State "DONE"       from "TODO"       [2021-01-21 jeu. 23:44]
 
 * archive
 ** TODO standard layout (or timeline) ?

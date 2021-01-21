@@ -329,7 +329,7 @@
 }
 .pagination-selected {
     // color: $sidebar-color;
-    background-color: $content-background;
+    background-color: darken($content-background, 20%);
 
     a {
         // color: $sidebar-color;

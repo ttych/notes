@@ -1,9 +1,23 @@
-<section class="side-item">
-  {%- if paginator -%}
-  <p>has paginator</p>
-  {%- endif -%}
+<section {% if include.class %}class="{{ include.class }}"{% endif %}>
+  <h1>Navigation</h1>
+  <ul>
+    {%- if paginator -%}
+    <li>Page: {{ paginator.page }} of {{ paginator.total_pages }}</li>
+    {%- if paginator.previous_page -%}
+    <li><a href="{{ paginator.previous_page_path | relative_url }}">&larr; Page {{ paginator.previous_page }}</a></li>
+    {%- endif -%}
+    {%- if paginator.next_page -%}
+    <li><a href="{{ paginator.next_page_path | relative_url }}">&rarr; Page {{ paginator.next_page }}</a></li>
+    {%- endif -%}
+    {%- endif -%}
 
-  {{ page.type }}
-
-  {{ page.categories }}
+    {%- if page.type == "post" -%}
+    {%- if page.next -%}
+    <li><a href="{{ page.next.url | relative_url }}">&rarr; {{ page.next.title }}</a></li>
+    {%- endif -%}
+    {%- if page.previous -%}
+    <li><a href="{{ page.previous.url | relative_url }}">&larr; {{ page.previous.title }}</a></li>
+    {%- endif -%}
+    {%- endif -%}
+  </ul>
 </section>

@@ -17,21 +17,21 @@ layout: default
       </li>
       {%- endif -%}
 
-      {% for page in (1..paginator.total_pages) %}
+      {%- for page in (1..paginator.total_pages) -%}
       <li class="pagination-item {% if page == paginator.page %}pagination-selected{% endif %}">
-        {% if page == 1 %}
+        {%- if page == 1 -%}
         <a href="{{ site.paginate_path | relative_url | replace: 'page:num/', '' }}">{{ page }}</a>
-        {% else %}
+        {%- else -%}
         <a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
-        {% endif %}
+        {%- endif -%}
       </li>
-      {% endfor %}
+      {%- endfor -%}
 
-      {% if paginator.next_page %}
+      {%- if paginator.next_page -%}
       <li>
         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&rarr;</a>
       </li>
-      {% endif %}
+      {%- endif -%}
     </ul>
   </pagination>
-{% endif %}
+{%- endif -%}

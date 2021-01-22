@@ -1,27 +1,29 @@
 #+TITLE: notes on Notes
 #+AUTHOR: ttych
 #+DATE: 2021-01-18
-#+STARTUP: showall
+#+STARTUP: content
 
 * example
-  http://jekyllthemes.org/themes/tale/
-  http://jekyllthemes.org/themes/jekyll-clean/
-  http://jekyllthemes.org/themes/whiteglass/
+** http://jekyllthemes.org/themes/tale/
+** http://jekyllthemes.org/themes/jekyll-clean/
+** http://jekyllthemes.org/themes/whiteglass/
 
 * post / article
-** TODO navigation (sidebar)
+** DONE navigation (sidebar)
+   - State "DONE"       from "TODO"       [2021-01-22 ven. 22:54]
 ** TODO meta (sidebar)
-** TODO references (sidebar)
+** DONE references (sidebar)
+   - State "DONE"       from "TODO"       [2021-01-22 ven. 21:58]
 ** TODO Related articles (sidebar)
-** TODO highlight (code)
-
+** DONE highlight (code)
+   - State "DONE"       from "TODO"       [2021-01-22 ven. 19:19]
 * index
 ** DONE recent notes
    - State "DONE"       from              [2021-01-21 jeu. 22:41]
-** TODO navigation with pagination (sidebar)
+** DONE navigation with pagination (sidebar)
+   - State "DONE"       from "TODO"       [2021-01-22 ven. 22:55]
 ** DONE navigation (bottom)
    - State "DONE"       from "TODO"       [2021-01-21 jeu. 23:44]
-
 * archive
 ** TODO standard layout (or timeline) ?
 ** TODO timeline in Kevin Powell ?

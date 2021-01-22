@@ -1,8 +1,8 @@
-<section class="side-item">
+<section {% if include.class %}class="{{ include.class }}"{% endif %}>
   <h1>Recent Notes</h1>
   <ul>
     {%- for post in site.posts limit:5 -%}
-    <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+    <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
     {%- endfor -%}
   </ul>
 </section>

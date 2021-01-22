@@ -338,11 +338,17 @@
 
 
 ////////// side
-.side-item * {
+.site-sidebar > .content-area * {
     margin-top: 0;
     margin-bottom: 0;
 }
-.side-item h1 {
+.site-sidebar > .content-area h1 {
+    font-size: 1.2rem;
     color: $banner-a2-color;
     margin-bottom: 0.5em;
+}
+.site-sidebar > .content-area ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
 }

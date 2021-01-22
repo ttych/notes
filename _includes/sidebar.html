@@ -1,16 +1,8 @@
 <aside class="site-sidebar">
-  <div class="content-area">
-    <section class="side-item">
-      {{ site.description }}
-    </section>
-  </div>
-  <div class="content-area">
-    {%- include side_navigation.html -%}
-  </div>
-  <div class="content-area">
-    References
-  </div>
-  <div class="content-area">
-    {%- include recent_posts.html -%}
-  </div>
+  <section class="content-area">
+    {{ site.description }}
+  </section>
+  {%- include side_navigation.html class="content-area" -%}
+  {%- include article-references.html class="content-area"-%}
+  {%- include recent_posts.html class="content-area" -%}
 </aside>

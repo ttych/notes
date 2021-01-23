@@ -12,11 +12,11 @@ layout: default
   <div class="pagination">
     <ul>
       {%- if paginator.previous_page -%}
-      <li>
+      <li class="t-big">
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;</a>
       </li>
       {%- endif -%}
-
+      <li class="flex-1"></li>
       {%- for page in (1..paginator.total_pages) -%}
       <li class="pagination-item {% if page == paginator.page %}pagination-selected{% endif %}">
         {%- if page == 1 -%}
@@ -26,9 +26,9 @@ layout: default
         {%- endif -%}
       </li>
       {%- endfor -%}
-
+      <li class="flex-1"></li>
       {%- if paginator.next_page -%}
-      <li>
+      <li class="t-big">
         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&rarr;</a>
       </li>
       {%- endif -%}

@@ -20,7 +20,9 @@
 .t-small {
     font-size: 0.8em;
 }
-
+.t-big {
+    font-size: 1.3em;
+}
 
 ////////// site
 .site {
@@ -351,4 +353,25 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+}
+
+
+////////// archives
+.archives {
+    display: flex;
+    flex-direction: column;
+}
+.archives-y {
+    display: flex;
+    flex-direction: column;
+}
+.archives > *:not(:first-child) {
+    margin-top: 1.5em;
+}
+.archive-link {
+    margin-left: 2em;
+    display: flex;
+}
+.archive-date {
+    flex: 0 0 8ch;
 }

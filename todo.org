@@ -7,7 +7,6 @@
 ** http://jekyllthemes.org/themes/tale/
 ** http://jekyllthemes.org/themes/jekyll-clean/
 ** http://jekyllthemes.org/themes/whiteglass/
-
 * post / article
 ** DONE navigation (sidebar)
    - State "DONE"       from "TODO"       [2021-01-22 ven. 22:54]

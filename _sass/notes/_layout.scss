@@ -273,9 +273,8 @@
     box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
 }
 .content-area {
-    h1 {
+    h1, h2, h3, h4 {
         color: $article-header-color;
-        margin-bottom: 0;
     }
 }
 
@@ -283,6 +282,7 @@
 ////////// article
 .article-title {
     font-size: 1.5rem;
+    margin-bottom: 0;
 }
 .article-meta {
     font-size: 0.7rem;

@@ -6,22 +6,20 @@ navbar_in: true
 navbar_order: 9
 ---
 
-<div class="content-area">
-  <div class="archives">
-    {%- assign pyear = "none" -%}
-    {%- for post in site.posts -%}
-      {%- assign year = post.date | date: '%Y' -%}
-      {%- if year != pyear -%}
-        {%- if pyear != "none" -%}</div>{%- endif -%}
-    <div class="archives-y">
-      <h1>{{ year }}</h1>
-      {%- endif %}
-      <a class="archive-link" href="{{ post.url | relative_url }}">
-        <span class="archive-date">{{ post.date | date: "%b %-d" }}</span>
-        <span class="archive-title">{{ post.title }}</span>
-      </a>
-      {%- assign pyear = year -%}
-      {%- if forloop.last -%}</div>{%- endif -%}
-    {%- endfor -%}
-  </div>
+<div class="archives">
+  {%- assign pyear = "none" -%}
+  {%- for post in site.posts -%}
+    {%- assign year = post.date | date: '%Y' -%}
+    {%- if year != pyear -%}
+      {%- if pyear != "none" -%}</div>{%- endif -%}
+  <div class="archives-y">
+    <h1>{{ year }}</h1>
+    {%- endif %}
+    <a class="archive-link" href="{{ post.url | relative_url }}">
+      <span class="archive-date">{{ post.date | date: "%b %-d" }}</span>
+      <span class="archive-title">{{ post.title }}</span>
+    </a>
+    {%- assign pyear = year -%}
+    {%- if forloop.last -%}</div>{%- endif -%}
+  {%- endfor -%}
 </div>

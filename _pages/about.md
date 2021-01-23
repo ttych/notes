@@ -6,15 +6,27 @@ navbar_in: true
 navbar_order: 20
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+# Hey !
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+## About Notes
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+The site is a static website generated with [jekyll][jekyll-www].
+
+The jekyll theme is a custom one created from other themes that can be
+found [here][jekyll-themes-www].
+
+Hosting (and generation) is made by
+[github-pages][github-pages-www]/[gitlab-pages][gitlab-pages-www], on
+push on master branch.
+
+## About Me
+
+This site is a way to keep track of things I am working on.
+
+More to say ...
 
 
-[jekyll-organization]: https://github.com/jekyll
+[jekyll-www]: https://jekyllrb.com/
+[jekyll-themes-www]: http://jekyllthemes.org/
+[github-pages-www]: https://pages.github.com/
+[gitlab-pages-www]: https://docs.gitlab.com/ee/user/project/pages/

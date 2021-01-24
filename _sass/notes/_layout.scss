@@ -375,3 +375,55 @@
 .archive-date {
     flex: 0 0 8ch;
 }
+
+
+////////// tags
+.tags {
+    display: flex;
+    flex-direction: column;
+}
+.tags-header-title {
+    font-size: 1.5rem;
+}
+.tags-clouds {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+.tags-clouds {
+    & > a {
+    padding: 0.3em 0.5em;
+    margin: 0 0.2em 0.2em;
+    background: rgba(0,0,0,0.1);
+    text-decoration: none;
+    border-radius: 0.3em;
+    }
+    & > a:hover {
+        text-decoration: none;
+        background: rgba(0,0,0,0.2);
+    }
+}
+.tags-item {
+    margin-bottom: 1em;
+}
+.tags-item-icon {
+    height: 1em;
+}
+.tags-item-label {
+    display: inline-block;
+    margin: 0.5em 0;
+}
+.tags-post {
+    margin-left: 2em;
+    display: flex;
+    // width: 60ch;
+}
+.tags-post-title {
+    flex: 0 1 60ch;
+}
+.tags-post-meta {
+    flex: 0 0 8ch;
+    // margin-left: auto;
+}

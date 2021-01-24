@@ -1,3 +1,5 @@
+{%- if paginator or page.type == "post" -%}
+
 <section {% if include.class %}class="{{ include.class }}"{% endif %}>
   <h1>Navigation</h1>
   <ul>
@@ -21,3 +23,5 @@
     {%- endif -%}
   </ul>
 </section>
+
+{%- endif -%}

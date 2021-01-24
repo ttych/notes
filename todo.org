@@ -3,10 +3,6 @@
 #+DATE: 2021-01-18
 #+STARTUP: content
 
-* example
-** http://jekyllthemes.org/themes/tale/
-** http://jekyllthemes.org/themes/jekyll-clean/
-** http://jekyllthemes.org/themes/whiteglass/
 * post / article
 ** DONE navigation (sidebar)
    - State "DONE"       from "TODO"       [2021-01-22 ven. 22:54]
@@ -24,16 +20,16 @@
 ** DONE navigation (bottom)
    - State "DONE"       from "TODO"       [2021-01-21 jeu. 23:44]
 * archive
-** TODO standard layout (or timeline) ?
+** DONE standard layout (or timeline) ?
+   - State "DONE"       from "TODO"       [2021-01-23 sam. 22:45]
 ** TODO timeline in Kevin Powell ?
 
 * tags
-** TODO add sidebar tags ?
-
+** DONE add sidebar tags ?
+   - State "DONE"       from "TODO"       [2021-01-24 dim. 15:32]
 * browse categories ?
 ** TODO categories from _config / from path ?
-
 * about
-** TODO about the site / hosting / me / content type
-
+** DONE about the site / hosting / me / content type
+   - State "DONE"       from "TODO"       [2021-01-23 sam. 22:44]
 * tmp

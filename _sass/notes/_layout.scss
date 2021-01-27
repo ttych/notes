@@ -28,7 +28,7 @@
 .site {
     font-size: $font-size;
     font-family: $font-family;
-    font-weight: $font-weight;
+    // font-weight: $font-weight;
     color: $text-color;
     background-color: $background-color;
 
@@ -280,6 +280,9 @@
 
 
 ////////// article
+.article-head {
+    margin-bottom: 3em;
+}
 .article-title {
     font-size: 1.5rem;
     margin-bottom: 0;
@@ -294,13 +297,32 @@
     justify-content: start;
     gap: 2em;
 }
-.article-content {
-    margin-top: 1em;
-}
 .article-annotation {
     font-size: 0.8em;
     color: $article-annotation-color;
     margin: 0;
+}
+.article-content {
+    margin-top: 1em;
+
+    h1 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 2em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    h4 {
+        font-size: 1.25em;
+    }
+    h5 {
+        font-size: 1em;
+    }
+    h6 {
+        font-size: 0.8em;
+    }
 }
 
 

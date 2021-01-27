@@ -3,26 +3,30 @@ layout: default
 ---
 
 <div class="content-area">
-<article class="article">
-  <h1 class="article-title">
-    <a href="{{ site.baseurl}}{{ page.url }}">{{ page.date | date: "%b %-d, %Y" }} - {{ page.title }}</a>
-  </h1>
-  {%- include article-meta.html article=include.article -%}
-  {% if site.comments and page.comments %}
-  {% if site.disqus != '' %}
-  <p class="author"><a href="#disqus_thread" data-disqus-identifier="{{ page.url | slugify }}">Comments</a></p>
-  {% endif %}
-  {% endif %}
-  <div class="article-content">
-    {{ content }}
-  </div>
-  {% if page.comments %}
-  {% if site.disqus != '' %}
-  <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-  </div>
-  {% endif %}
-  {% endif %}
-</article>
+  <article class="article">
+    <div class="article-head">
+      <h1 class="article-title">
+        <a href="{{ site.baseurl}}{{ page.url }}">{{ page.date | date: "%b %-d, %Y" }} - {{ page.title }}</a>
+      </h1>
+      {%- include article-meta.html article=include.article -%}
+      {% if site.comments and page.comments %}
+      {% if site.disqus != '' %}
+      <p class="author"><a href="#disqus_thread" data-disqus-identifier="{{ page.url | slugify }}">Comments</a></p>
+      {% endif %}
+      {% endif %}
+    </div>
+    <div class="article-content">
+      {{ content }}
+    </div>
+    <div class="article-footer">
+      {% if page.comments %}
+      {% if site.disqus != '' %}
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+      {% endif %}
+      {% endif %}
+    </div>
+  </article>
 </div>
